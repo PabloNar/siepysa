@@ -10,7 +10,7 @@ SELECT * FROM dta_uio.DATA_2020 AS D;
 CREATE OR REPLACE FUNCTION dta_uio.iif_sql(BOOLEAN, numeric, numeric) returns numeric AS
 $body$ SELECT case $1 when true then $2 else $3 end $body$
 LANGUAGE sql IMMUTABLE;
-
+--2. busqueda de cualquier valor segun la condición.
 CREATE OR REPLACE FUNCTION dta_uio.sif_sql(BOOLEAN, text, text) returns TEXT AS
 $body$ SELECT case $1 when true then $2 else $3 end $body$
 LANGUAGE sql IMMUTABLE;
